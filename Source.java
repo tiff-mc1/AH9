@@ -14,10 +14,10 @@ class Source {
     Node<T> prev = null;
 
     while (curr != null) {
-      Node<T> next = curr.next;
+      Node<T> temp = curr.next;
       curr.next = prev;
       prev = curr;
-      curr = next;
+      curr = temp;
     }
     return head = prev;
   }
